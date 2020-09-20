@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="stylesheet" href="account.css">
+    <title></title>
+
+    <script type="text/JavaScript">
+    function createNewElement() {
+        // First create a DIV element.
+    	var txtNewInputBox = document.createElement('div');
+      // var txtNewInputBox2 = document.createElement();
+
+        // Then add the content (a new input box) of the element.
+    	txtNewInputBox.innerHTML = "<input type='text' id='newInputBox'>";
+      // txtNewInputBox2.innerHTML = "<input type='text' id='newInputBox2'>";
+
+        // Finally put it where it is supposed to appear.
+    	document.getElementById("newElementId").appendChild(txtNewInputBox);
+      // document.getElementById("newElementId2").appendChild(txtNewInputBox2);
+    }
+    </script>
+
+    <!-- <SCRIPT language="javascript">
+    function add(type) {
+      //Create an input type dynamically.
+      var element = document.createElement("input");
+      //Assign different attributes to the element.
+      element.setAttribute("type", type);
+      element.setAttribute("value", type);
+      element.setAttribute("name", type);
+      var foo = document.getElementById("fooBar");
+      //Append the element in page (in span).
+      foo.appendChild(element);
+    }
+    </SCRIPT> -->
+  </head>
+  <body>
+    <div class="title">
+      University COVID19 Submission Form
+    </div>
+    <div>
+      <form action="results.html" method="get" enctype="multipart/form-data">
+<!--   <label for="institution">COVID19 Information Regarding your University</label>-->
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Your name.." required>
+
+        <label for="lastname" requird>Last Name</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Your last name.." required>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your email.." required>
+        <div>
+          Gender
+          <div>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male">
+          </div>
+          <div>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female">
+          </div>
+        </div>
+        <!-- <label for="phone">Phone Number</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your number.."> -->
+        <label for="date">Date of Submission</label>
+        <input type="date" name="date" id="date" placeholder="Your date..">
+          <br>
+          <br>
+        <label>Institutions</label>
+        <select id="institution" name="univ">
+          <option name="select">Select</option>
+          <option name="institution1">University of North Carolina</option>
+          <option name="institution2">University of Southern California</option>
+          <option name="institution3">Howard University</option>
+        </select>
+
+      <!-- <H2>Dynamically add element in form.</H2>
+      Select the element and hit Add to add it in form.
+      <SELECT name="element">
+        <OPTION size="500" id="school" value="select">Select</OPTION>
+        <OPTION size="500" id="school" value="Title of Section" size="500">Title</OPTION>
+        <OPTION size="500" id="school" value="Information for Section" size="500">Information</OPTION> -->
+
+        <!-- Start of Not Needed -->
+      	<!-- <OPTION value="button">Button</OPTION>
+      	<OPTION value="text">Textbox</OPTION>
+      	<OPTION value="radio">Radio</OPTION> -->
+        <!-- End of Not Needed -->
+
+      <!-- </SELECT>
+      <INPUT type="b" value="Add" onclick="add(document.forms[0].element.value)"/>
+      <span id="fooBar">&nbsp;</span> -->
+
+      <!-- Start of Code #2 -->
+      <!-- <label for="institution">Important Website URLs</label>
+      <br>
+      <div id="dynamicCheck">
+        <input type="button" value="Name for Specific URL" onclick="createNewElement();"</input>
+        <input type="button" value="URL" onclick="createNewElement();"</input>
+        <div id="newElementId"></div>
+      </div> -->
+      <label for="mobile">Important Mobile Numbers</label>
+      <br>
+      <div id="dynamicCheck">
+        <input type="button" id="mobile" name="mobile" value="Name for Phone Number" onclick="createNewElement();"></input>
+        <input type="button" id="mobile" name="mobile" value="Phone Number" onclick="createNewElement();"></input>
+        <div id="newElementId"></div>
+      </div>
+      <label for="url">Important URLs</label>
+      <br>
+      <textarea name="url" id="url" rows="10" cols="50" placeholder="Enter Important URLs Here..
+  [Name for URL]
+    [URL]"></textarea>
+    <br>
+      <br>
+          <br>
+          <br>
+      <label for="info">COVID19 Information Regarding your University></label>
+          <br>
+          <br>
+      <!-- <div id="dynamicCheck2">
+        <input type="button" value="[Title of Section]" onclick="createNewElement();"</input>
+        <input type="button" value="[COVID19 Information]" onclick="createNewElement();"</input>
+        <div id="newElementId2">New Section Here:</div> -->
+      <!-- </div> -->
+      <!-- <br> --> -->
+          <textarea name="info" id="info" rows="10" cols="165" placeholder="Enter COVID19 Information Regarding your University Here..
+  [Title of Section]
+    [COVID19 Information]"></textarea>
+      <!-- <input type = "submit" value = "submit"</input>
+      <div id="dynamicCheck">
+        <input type="button" value="[Title of Section]" onclick="createNewElement();"/>
+
+        <input type="button" value="[COVID19 Information]" onclick="createNewElement();"/>
+      </div>
+      <div id="newElementId">New Section Here:</div> --> -->
+      <!-- End of Code #2 -->
+          <br>
+          <br>
+          <br>
+          <label for="file">File</label>
+          <input id="file" type="file" name="file">
+          <div>
+      <button type="submit" class="button1">Submit</button>
+              </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="charts.css">
+  <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['No', ''],
+        ['Yes',     46],
+        ['May',      12]
+        // ['Commute',  4],
+        // ['Watch TV', 2],
+        // ['Sleep',    7]
+      ]);
+
+      var options = {
+        title: 'My Daily Activities',
+        is3D: true,
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+      chart.draw(data, options);
+    }
+    </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      google.charts.load('current', {packages: ['corechart', 'bar']});
+      google.charts.setOnLoadCallback(drawBasic);
+
+
+      function drawBasic() {
+        var data = google.visualization.arrayToDataTable([
+          ['City', '2010 Population',],
+          ['New York City, NY', 8175000],
+          ['Los Angeles, CA', 3792000],
+          ['Chicago, IL', 2695000],
+          ['Houston, TX', 2099000],
+          ['Philadelphia, PA', 1526000]
+        ]);
+
+        var options = {
+          title: 'Population of Largest U.S. Cities',
+          chartArea: {width: '50%'},
+          hAxis: {
+            title: 'Total Population',
+            minValue: 0
+          },
+          vAxis: {
+            title: 'City'
+          }
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>COVID-19 College Quarantine/Isolation Survey</h1>
+    <h2>We're creating an app to anonymously connect quarantined, isolated, curious, and cautious college students to increase the spread of COVID-19 information for young adults. Our goal is to improve mental health of young adults, take advantage of the widespread # of college cases (by analyzing this data), and streamline the isolation/quarantine process for students and colleges.</h2>
+    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    <div id="chart_div"></div>
+<!--  <iframe frameborder="0" allowtransparency="true" allowfullscreen="true" title="Data Visualization" marginheight="0" marginwidth="0" scrolling="no" style="display: block; width: 1100px; height: 877px; visibility: visible;" src="https://public.tableau.com/views/CarolinaCOVID-19MonitoringDashboard/COVID19MetricsDashboard?%3Aembed=y&amp;%3AshowVizHome=no&amp;%3Adisplay_count=y&amp;%3Adisplay_static_image=y&amp;%3AbootstrapWhenNotified=true&amp;%3Alanguage=en&amp;:embed=y&amp;:showVizHome=n&amp;:apiID=host0#navType=0&amp;navSrc=Parse"></iframe>-->
+  <iframe id="myIframe"
+        src="https://public.tableau.com/views/CarolinaCOVID-19MonitoringDashboard/COVID19MetricsDashboard?%3Aembed=y&%3AshowVizHome=no&%3Adisplay_count=y&%3Adisplay_static_image=y&%3AbootstrapWhenNotified=true&%3Alanguage=en&:embed=y&:showVizHome=n&:apiID=host0#navType=0&navSrc=Parse"
+        width="100%" height="950" frameBorder="0"
+        style="text-align: center"
+  </iframe>
+  </body>
+</html>
